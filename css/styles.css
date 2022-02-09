@@ -661,10 +661,6 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .samples-thumb:hover::before {
-  opacity: 1;
-} */
-
 .sample-link:hover .samples-thumb::before,
 .sample-link:focus .samples-thumb::before {
   transform: translateY(0);
@@ -892,8 +888,7 @@ img {
   flex-direction: column;
 }
 
-.form-item {
-  position: relative;
+.form-label {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -912,12 +907,14 @@ img {
   margin-top: 10px;
 }
 
+.form-box {
+  position: relative;
+  width: 100%;
+}
+
 .form-input {
   display: block;
   width: 100%;
-  margin: 0;
-  padding-top: 12px;
-  padding-bottom: 12px;
   padding-left: 42px;
 
   height: 40px;
@@ -946,9 +943,10 @@ img {
 
 .form-icon {
   position: absolute;
-  transform: translateY(100%);
-  top: 15px;
+  transform: translateY(-50%);
+  top: 50%;
   left: 14px;
+
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1073,6 +1071,8 @@ textarea {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-label {
